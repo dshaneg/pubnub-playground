@@ -16,14 +16,14 @@ namespace PubnubPub
 
         public void Publish(string message)
         {
-            _pubnub.Publish<string>(
+            _pubnub.Publish<Message>(
                 _channel,
-                message,
+                new Message {Body = message, Id = "blah", Stamp = DateTime.Now},
                 _DisplayReturnMessage,
                 _DisplayErrorMessage);
         }
 
-        private static void _DisplayReturnMessage(string result)
+        private static void _DisplayReturnMessage(Message result)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(result);
