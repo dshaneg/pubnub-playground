@@ -1,9 +1,10 @@
 using System;
 using PubNubMessaging.Core;
+using PubnubSubscriber;
 
 namespace PubnubSub
 {
-    public class Subscriber
+    public class Subscriber : ISubscriberService
     {
         private readonly Pubnub _pubnub;
         private readonly string _channel;
@@ -42,6 +43,25 @@ namespace PubnubSub
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(pubnubError.ToString());
             Console.ResetColor();
+        }
+
+        public void Start()
+        {
+            _pubnub.Subscribe<string>(
+                _channel,
+                _DisplaySubscribeReturnMessage,
+                _DisplaySubscribeConnectStatusMessage,
+                _DisplayErrorMessage);
+        }
+
+        public void Stop()
+        {
+            _pubnub.Unsubscribe<string>(
+                _channel,
+                _DisplaySubscribeReturnMessage,
+                _DisplaySubscribeConnectStatusMessage,
+                _DisplaySubscribeConnectStatusMessage,
+                _DisplayErrorMessage);
         }
     }
 }

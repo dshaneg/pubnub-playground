@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Configuration;
 using System.Threading;
+using DummyDomain;
+using PubnubMessaging;
 using PubNubMessaging.Core;
 
 namespace PubnubPub
@@ -20,7 +22,10 @@ namespace PubnubPub
 
             for (var i = 0; i < 300; i++)
             {
-                publisher.Publish(string.Format("Message {0} from {1} at {2}.", i, senderName, DateTime.UtcNow));
+                var header = new Header(Guid.NewGuid().ToString("N"), Pubnub.TranslateDateTimeToPubnubUnixNanoSeconds(DateTime.UtcNow));
+                var body = new DummyEvent(string.Format("{0}_{1}", senderName, i), i, DateTime.Now);
+
+                publisher.Publish(new Message<DummyEvent>(header, body));
                 Thread.Sleep(1000);
             }
 

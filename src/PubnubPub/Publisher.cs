@@ -1,4 +1,5 @@
 using System;
+using PubnubMessaging;
 using PubNubMessaging.Core;
 
 namespace PubnubPub
@@ -14,7 +15,7 @@ namespace PubnubPub
             _channel = channel;
         }
 
-        public void Publish(string message)
+        public void Publish<T>(Message<T> message)
         {
             _pubnub.Publish<string>(
                 _channel,
@@ -23,10 +24,10 @@ namespace PubnubPub
                 _DisplayErrorMessage);
         }
 
-        private static void _DisplayReturnMessage(string result)
+        private static void _DisplayReturnMessage(string message)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(result);
+            Console.WriteLine(message);
             Console.ResetColor();
         }
 

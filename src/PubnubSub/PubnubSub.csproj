@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Handler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Subscriber.cs" />
@@ -53,6 +54,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DummyDomain\DummyDomain.csproj">
+      <Project>{476b10e0-5f9a-4c0e-b7a2-6eb63f86214d}</Project>
+      <Name>DummyDomain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PubnubMessaging\PubnubMessaging.csproj">
+      <Project>{3192ed1d-d514-4800-b4ad-43cd46f50314}</Project>
+      <Name>PubnubMessaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PubnubSubscriber\PubnubSubscriber.csproj">
+      <Project>{6b13a989-3c05-4580-a7b1-87a6a3063d3c}</Project>
+      <Name>PubnubSubscriber</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pubnub\Pubnub.csproj">
       <Project>{a55d9d0b-272d-416a-8af5-54f2e39bcb6e}</Project>
       <Name>Pubnub</Name>

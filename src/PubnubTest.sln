@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubnubPub", "PubnubPub\PubnubPub.csproj", "{9DBD1F5A-692B-42F1-A5F4-C38998DE08E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pubnub", "Pubnub\Pubnub.csproj", "{A55D9D0B-272D-416A-8AF5-54F2E39BCB6E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubnubSub", "PubnubSub\PubnubSub.csproj", "{92C5A3D4-A541-4FAD-9C4E-297BF7CACB0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubnubSubscriber", "PubnubSubscriber\PubnubSubscriber.csproj", "{6B13A989-3C05-4580-A7B1-87A6A3063D3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubnubMessaging", "PubnubMessaging\PubnubMessaging.csproj", "{3192ED1D-D514-4800-B4AD-43CD46F50314}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyDomain", "DummyDomain\DummyDomain.csproj", "{476B10E0-5F9A-4C0E-B7A2-6EB63F86214D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,18 @@ Global
 		{92C5A3D4-A541-4FAD-9C4E-297BF7CACB0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92C5A3D4-A541-4FAD-9C4E-297BF7CACB0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92C5A3D4-A541-4FAD-9C4E-297BF7CACB0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B13A989-3C05-4580-A7B1-87A6A3063D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B13A989-3C05-4580-A7B1-87A6A3063D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B13A989-3C05-4580-A7B1-87A6A3063D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B13A989-3C05-4580-A7B1-87A6A3063D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3192ED1D-D514-4800-B4AD-43CD46F50314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3192ED1D-D514-4800-B4AD-43CD46F50314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3192ED1D-D514-4800-B4AD-43CD46F50314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3192ED1D-D514-4800-B4AD-43CD46F50314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{476B10E0-5F9A-4C0E-B7A2-6EB63F86214D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{476B10E0-5F9A-4C0E-B7A2-6EB63F86214D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{476B10E0-5F9A-4C0E-B7A2-6EB63F86214D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{476B10E0-5F9A-4C0E-B7A2-6EB63F86214D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
